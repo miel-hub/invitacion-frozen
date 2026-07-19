@@ -36,10 +36,16 @@ export class AppComponent implements OnInit, OnDestroy {
 
   // ¡Una sola función unificada y sin errores!
   reproducirMusica() {
-    if (this.audio.paused) {
-      this.audio.play();
-    } else {
-      this.audio.pause();
+    const audio = document.getElementById('miMusica') as HTMLAudioElement;
+    
+    if (audio) {
+      if (audio.paused) {
+        // Si está en pausa, que suene
+        audio.play().catch(err => console.log("El navegador bloqueó el audio:", err));
+      } else {
+        // Si ya está sonando y presionan el botón, que se pause
+        audio.pause();
+      }
     }
   }
 // --- AGREGA ESTA NUEVA FUNCIÓN AQUÍ ---
