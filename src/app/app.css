@@ -83,7 +83,7 @@
 /* --- ZONAS INTERACTIVAS INVISIBLES SOBRE LAS IMÁGENES --- */
 .boton-audio {
   position: absolute;
-  top: 43.9%;
+  top: 39.9%;
   left: 50%;
   transform: translateX(-30%);
   width: 13%;
