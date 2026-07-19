@@ -94,7 +94,7 @@
 
 .contenedor-contador {
   position: absolute;
-  top: 35%; /* <-- Cambiamos de 12% a 45% para bajarlo bastante */
+  top: 55%; /* <-- Cambiamos de 12% a 45% para bajarlo bastante */
   left: 0;
   width: 100%;
   display: flex;
