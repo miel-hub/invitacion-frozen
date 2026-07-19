@@ -126,7 +126,7 @@
 
 .boton-ubicacion {
   position: absolute;
-  top: 46%; /* <-- Mueve esto para subir o bajar el cuadro */
+  top: 47%; /* <-- Mueve esto para subir o bajar el cuadro */
   left: 51%;
   transform: translate(-52%, -55%);
   width: 22%;
