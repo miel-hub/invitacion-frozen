@@ -7,8 +7,9 @@ import { Component, OnInit, OnDestroy, ViewChild, ElementRef } from '@angular/co
 })
 export class AppComponent implements OnInit, OnDestroy {
   invitacionAbierta = false;
-  musicaReproduciendo = false;
-  audio = new Audio('/cancion.mp3');
+
+  // Usamos la ruta directa para que GitHub Pages la encuentre sin problemas
+  audio = new Audio('cancion.mp3');
 
   dias: string = '00';
   horas: string = '00';
@@ -20,7 +21,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.iniciarContador();
-    this.audio.loop = true;
+    this.audio.loop = true; // Hace que la canción se repita
   }
 
   ngOnDestroy() {
@@ -33,12 +34,20 @@ export class AppComponent implements OnInit, OnDestroy {
     this.reproducirMusica();
   }
 
+  // ¡Una sola función unificada y sin errores!
   reproducirMusica() {
-    this.musicaReproduciendo ? this.audio.pause() : this.audio.play();
-    this.musicaReproduciendo = !this.musicaReproduciendo;
+    if (this.audio.paused) {
+      this.audio.play();
+    } else {
+      this.audio.pause();
+    }
   }
-
-  // Esta es la única función de envío que necesitamos
+// --- AGREGA ESTA NUEVA FUNCIÓN AQUÍ ---
+abrirUbicacion() {
+    // Enlace directo y exacto a EL PALENQUE
+    const linkMapa = 'https://www.google.com/maps/place/Centro+de+Recepciones+-+Restaurante+%22EL+PALENQUE%22/@-13.7164663,-76.1409328,17z/data=!4m6!3m5!1s0x911067006c28a017:0x858b6adb41c12422!8m2!3d-13.7164663!4d-76.1409328';
+    window.open(linkMapa, '_blank');
+  }
   enviarFormulario() {
     const form = this.formRef.nativeElement as HTMLFormElement;
 
