@@ -83,13 +83,13 @@
 /* --- ZONAS INTERACTIVAS INVISIBLES SOBRE LAS IMÁGENES --- */
 .boton-audio {
   position: absolute;
-  top: 33.9%;
+  top: 34.9%;
   left: 50%;
   transform: translateX(-30%);
   width: 13%;
   height: 2%;
   cursor: pointer;
-  border: 2px solid rgba(255, 255, 255, 0.925);
+  border: 2px solid rgba(207, 33, 33, 0.925);
 }
 
 .contenedor-contador {
@@ -126,7 +126,7 @@
 
 .boton-ubicacion {
   position: absolute;
-  top: 41%;
+  top: 41%; /* <-- Mueve esto para subir o bajar el cuadro */
   left: 50%;
   transform: translate(-50%, -20%);
   width: 21%;
@@ -134,8 +134,8 @@
   cursor: pointer;
   z-index: 15;
   display: block;
+  border: 3px solid red; /* <-- BORDE ROJO PARA APUNTAR */
 }
-
 .input-invisible-nombre {
   position: absolute;
   top: 61%;
