@@ -89,7 +89,7 @@
   width: 11%;
   height: 2%;
   cursor: pointer;
-  border: 2px solid rgba(207, 33, 33, 0.925);
+  
 }
 
 .contenedor-contador {
@@ -134,7 +134,7 @@
   cursor: pointer;
   z-index: 15;
   display: block;
-  border: 3px solid red; /* <-- BORDE ROJO PARA APUNTAR */
+  
 }
 .input-invisible-nombre {
   position: absolute;
