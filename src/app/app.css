@@ -94,7 +94,7 @@
 
 .contenedor-contador {
   position: absolute;
-  top: 12%;
+  top: 45%; /* <-- Cambiamos de 12% a 45% para bajarlo bastante */
   left: 0;
   width: 100%;
   display: flex;
@@ -104,23 +104,24 @@
 }
 
 .numero-tiempo {
-  color: white;
+  color: #182c59; /* <-- Color azul oscuro elegante */
   font-family: 'Playfair Display', serif;
   font-size: 7vw;
-  font-weight: normal;
+  font-weight: bold; /* Negrita para que resalte */
   width: 20%;
   text-align: center;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+  /* Eliminamos la sombra (text-shadow) para que se vea limpio */
 }
 
 .dos-puntos {
-  color: white;
+  color: #182c59; /* <-- Color azul oscuro elegante */
   font-family: 'Playfair Display', serif;
   font-size: 6vw;
+  font-weight: bold; /* Negrita para que resalte */
   width: 5%;
   text-align: center;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
   margin-bottom: 1%;
+  /* Eliminamos la sombra */
 }
 
 .boton-ubicacion {
