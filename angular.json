@@ -15,13 +15,18 @@
       "architect": {
         "build": {
           "builder": "@angular/build:application",
-          "options": {
+        "options": {
   "browser": "src/main.ts",
   "tsConfig": "tsconfig.app.json",
   "baseHref": "/mis-xv-ariana-nikolle/",
   "deployUrl": "/mis-xv-ariana-nikolle/",
-  "assets": [ ... ],
-  "styles": [ ... ]
+  "assets": [
+    "src/favicon.ico",
+    "src/assets"
+  ],
+  "styles": [
+    "src/styles.css"
+  ]
 },
           "configurations": {
             "production": {
