@@ -19,6 +19,7 @@
   "browser": "src/main.ts",
   "tsConfig": "tsconfig.app.json",
   "baseHref": "/mis-xv-ariana-nikolle/",
+  "deployUrl": "/mis-xv-ariana-nikolle/",
   "assets": [ ... ],
   "styles": [ ... ]
 },
