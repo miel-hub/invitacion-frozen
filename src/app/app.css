@@ -1,0 +1,185 @@
+/* --- RESET GLOBAL PARA QUITAR BORDES DEL NAVEGADOR --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================= PANTALLA 1: LA TAPA ================= */
+.pantalla-tapa {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedor-tapa {
+  position: relative;
+  height: 95vh; /* Ocupa el 95% del alto de la pantalla */
+  display: flex;
+  justify-content: center;
+}
+
+/* Imagen de la tapa: Crece a lo alto, ajusta su ancho sin deformarse y SIN LÍNEAS */
+.contenedor-tapa .img-base {
+  height: 100%;
+  width: auto;
+  object-fit: contain; /* Esto ayuda a mantener la mejor resolución posible */
+  border: none;
+  outline: none;
+}
+
+.boton-abrir {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 12%;
+  cursor: pointer;
+}
+
+/* ================= PANTALLA 2: EL INTERIOR ================= */
+.pantalla-interior {
+  width: 100vw; /* Asegura que el contenedor abarque todo el monitor */
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden; /* Evita que salgan barras de desplazamiento abajo */
+}
+
+.bloque-imagen {
+  position: relative;
+  width: 100%;
+  display: flex; /* Elimina cualquier espacio en blanco invisible */
+}
+
+/* Imágenes del interior: Se estiran al 100% del ancho, ajustan su alto sin deformarse */
+.bloque-imagen .img-base {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* --- ANIMACIÓN --- */
+.animacion-aparecer {
+  animation: fade-in 1.2s ease-out;
+}
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- ZONAS INTERACTIVAS INVISIBLES SOBRE LAS IMÁGENES --- */
+.boton-audio {
+  position: absolute;
+  top: 33.9%; /* Cambia este número (ej. 35%, 37%) para subir o bajar el cuadro */
+  left: 50%;
+  transform: translateX(-30%);
+  width:13%; /* Reduje el ancho para que solo cubra el círculo central */
+  height: 2%; /* Ajusta el alto si es necesario */
+  cursor: pointer;
+
+  /* ESTA LÍNEA TE AYUDARÁ A VER DÓNDE ESTÁ EL BOTÓN */
+  border: 2px solid rgba(255, 255, 255, 0.925);
+}
+
+.contenedor-contador {
+  position: absolute;
+  top: 12%;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Asegura que los números y los ":" estén a la misma altura */
+  padding: 0 1%; /* Ajusta este valor si necesitas juntar o separar más los números */
+}
+
+.numero-tiempo {
+  color: white;
+  font-family: 'Playfair Display', serif;
+  font-size: 7vw;
+  font-weight: normal;
+  width: 20%;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+}
+
+/* --- NUEVO: ESTILO DE LOS DOS PUNTOS --- */
+.dos-puntos {
+  color: white;
+  font-family: 'Playfair Display', serif;
+  font-size: 6vw;
+  width: 5%; /* Ocupan un espacio pequeño para no desordenar los números */
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+  margin-bottom: 1%; /* Ajuste milimétrico para que se vean centrados */
+}
+
+.boton-ubicacion {
+  position: absolute;
+  top: 41%; /* Vas a tener que subir o bajar este número */
+  left: 50%;
+  transform: translate(-50%, -20%);
+  width: 21%; /* Vas a tener que subir o bajar este número */
+  height: 0.7%; /* Vas a tener que subir o bajar este número */
+  cursor: pointer;
+  z-index: 15; /* Nos aseguramos de que nada lo tape */
+  display: block;
+
+
+}
+
+.input-invisible-nombre {
+  position: absolute;
+  top: 61%; /* Si está muy arriba, aumenta este número (ej. 62%) */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%; /* Puedes ajustarlo si el recuadro es más ancho o angosto */
+  height: 5%; /* Aumenté un poco el alto para que sea más fácil de tocar */
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5vw;
+  text-align: center;
+  color: #182c59;
+  z-index: 20; /* Importante para que esté al frente */
+}
+
+.boton-invisible-enviar {
+  position: absolute;
+  top: 63.2%; /* Ajusta este valor para que baje hasta el botón "Enviar" */
+  transform: translate(-30%, -10%);
+  left: 38%;
+  width: 60%;
+  height: 1.1%; /* Aumenté el alto para que sea un objetivo más grande al hacer clic */
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 20;
+
+}
+.bloque-imagen {
+  position: relative; /* ¡Esto es lo que mantiene al brillo en su lugar! */
+  width: 100%;
+  /* ... tus otros estilos ... */
+}
+
+.capa-brillo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/brillo.gif');
+  background-size: cover;
+  pointer-events: none;
+  z-index: 10;
+  opacity: 0.5;
+}

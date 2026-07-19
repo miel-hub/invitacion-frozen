@@ -1,0 +1,49 @@
+<!-- ================= PANTALLA 1: LA TAPA ================= -->
+@if (!invitacionAbierta) {
+  <div class="pantalla-tapa">
+    <div class="contenedor-tapa">
+      <img src="/1.png" class="img-base" alt="Portada de Invitación">
+      <div class="boton-abrir" (click)="abrirInvitacion()"></div>
+    </div>
+  </div>
+}
+
+<!-- ================= PANTALLA 2: EL INTERIOR ================= -->
+@if (invitacionAbierta) {
+  <div class="pantalla-interior animacion-aparecer">
+
+    <!-- IMAGEN 2 -->
+    <div class="bloque-imagen">
+      <img src="/2.png" class="img-base" alt="Vestido">
+      <div class="capa-brillo"></div> <!-- Brillo aquí -->
+      <div class="boton-audio" (click)="reproducirMusica()"></div>
+    </div>
+
+    <!-- IMAGEN 3 -->
+    <div class="bloque-imagen">
+      <img src="/3.png" class="img-base" alt="Itinerario">
+      <div class="capa-brillo"></div> <!-- Brillo aquí -->
+      <div class="contenedor-contador">
+        <div class="numero-tiempo">{{ dias }}</div>
+        <div class="dos-puntos">:</div>
+        <div class="numero-tiempo">{{ horas }}</div>
+        <div class="dos-puntos">:</div>
+        <div class="numero-tiempo">{{ minutos }}</div>
+        <div class="dos-puntos">:</div>
+        <div class="numero-tiempo">{{ segundos }}</div>
+      </div>
+    </div>
+
+    <!-- IMAGEN 4 -->
+    <div class="bloque-imagen" style="position: relative;">
+      <img src="/4.png" class="img-base" alt="Confirmación">
+      <div class="capa-brillo"></div> <!-- Brillo aquí -->
+
+      <form #formularioAsistencia id="formulario-asistencia" action="https://api.sheetmonkey.io/form/3wZb1b4fyHSACnNaa5KB3d" method="POST">
+        <input type="text" name="Nombre" class="input-invisible-nombre" placeholder="Ingresa tu nombre..." required>
+        <button type="button" class="boton-invisible-enviar" (click)="enviarFormulario()"></button>
+      </form>
+    </div>
+
+  </div>
+}
