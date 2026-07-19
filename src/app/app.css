@@ -83,7 +83,7 @@
 /* --- ZONAS INTERACTIVAS INVISIBLES SOBRE LAS IMÁGENES --- */
 .boton-audio {
   position: absolute;
-  top: 39.9%;
+  top: 33.9%;
   left: 50%;
   transform: translateX(-30%);
   width: 13%;
@@ -94,7 +94,7 @@
 
 .contenedor-contador {
   position: absolute;
-  top: 45%; /* <-- Cambiamos de 12% a 45% para bajarlo bastante */
+  top: 35%; /* <-- Cambiamos de 12% a 45% para bajarlo bastante */
   left: 0;
   width: 100%;
   display: flex;
