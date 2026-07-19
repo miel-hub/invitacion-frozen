@@ -30,10 +30,17 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   abrirInvitacion() {
+    // Aquí va tu lógica actual para abrir la tapa (por ejemplo: this.invitacionAbierta = true;)
     this.invitacionAbierta = true;
-    this.reproducirMusica();
+  
+    // Forzamos a que la música empiece a sonar inmediatamente al hacer clic
+    setTimeout(() => {
+      const audio = document.getElementById('miMusica') as HTMLAudioElement;
+      if (audio) {
+        audio.play().catch(err => console.log("Permiso de audio requerido:", err));
+      }
+    }, 100);
   }
-
   // ¡Una sola función unificada y sin errores!
   reproducirMusica() {
     const audio = document.getElementById('miMusica') as HTMLAudioElement;
