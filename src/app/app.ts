@@ -58,7 +58,7 @@ export class AppComponent implements OnInit, OnDestroy {
 // --- AGREGA ESTA NUEVA FUNCIÓN AQUÍ ---
 abrirUbicacion() {
     // Enlace directo y exacto a EL PALENQUE
-    const linkMapa = 'https://www.google.com/maps/place/Centro+de+Recepciones+-+Restaurante+%22EL+PALENQUE%22/@-13.7164663,-76.1409328,17z/data=!4m6!3m5!1s0x911067006c28a017:0x858b6adb41c12422!8m2!3d-13.7164663!4d-76.1409328';
+    const linkMapa = 'https://maps.app.goo.gl/fpojoXga1YRyy6LE6';
     window.open(linkMapa, '_blank');
   }
   enviarFormulario() {
